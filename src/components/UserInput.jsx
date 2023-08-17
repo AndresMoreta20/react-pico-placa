@@ -5,15 +5,9 @@ import { z, string } from "zod";
 import { plateRestriction } from "../utils/Restriction";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/dist/sweetalert2.min.css";
+import InputField from "./InputField";
 
 //Generic inputfield that includes its validation message
-const InputField = ({ label, name, type = "text", register, errors }) => (
-  <div>
-    <label className="label">{label}</label>
-    <input className="input" name={name} type={type} {...register(name)} />
-    <div style={{ color: "red" }}>{errors[name]?.message}</div>
-  </div>
-);
 
 function UserInput() {
   //ZOD is used for validation and each instance must have custom messages
@@ -50,7 +44,7 @@ function UserInput() {
           confirmButtonText: "Ok",
         })
       : Swal.fire({
-          title: "Bad!",
+          title: "Unfortunate",
           text: "There is a restriction for your plate",
           icon: "error",
           confirmButtonText: "Ok",
