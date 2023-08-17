@@ -41,6 +41,10 @@ h1 {
   line-height: 1.1;
 }
 
+.header h1 {
+  padding-left: 20px; 
+}
+
 /* Buttons */
 button {
   border-radius: 8px;
@@ -96,6 +100,7 @@ button:focus-visible {
 }
 
 .form {
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,4 +136,8 @@ button:focus-visible {
 .input:focus {
   border-color: #646cff;
   outline: none;
+}
+
+.custom-popup {
+  z-index: 10000 !important;
 }
