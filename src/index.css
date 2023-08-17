@@ -120,12 +120,12 @@ button:focus-visible {
 }
 
 .input {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: border-color 0.2s;
-  
+  margin: 20px;
 }
 
 .input:focus {
